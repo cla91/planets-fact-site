@@ -28,12 +28,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./Screenshot-mobile.png)
+![](./Screenshot-mobile-menu.png)
+![](./Screenshot-tablet-structure.png)
+![](./Screenshot-desktop-surface.png)
 
 ### Links
 
 - Solution URL: [Solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL here](https://cla91-planets-fact-site.netlify.app/)
 
 ## My process
 
