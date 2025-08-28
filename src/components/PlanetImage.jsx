@@ -1,28 +1,24 @@
-import formatImgUrl from "../utils/formtImgUrl";
-
-export default function PlanetImage({ currentTab, currentPlanet }) {
-  const currentImg =
-    currentTab === "overview"
-      ? "planet"
-      : currentTab === "structure"
-      ? "internal"
-      : "geology";
+export default function PlanetImage({
+  currentTab,
+  currentPlanet,
+  imgSrc,
+  geologyImageSrc,
+}) {
+  const isGeologyView = currentTab === "geology";
 
   return (
     <div className="planet-main_img-container">
       <img
         className={currentPlanet.name.toLowerCase()}
-        src={
-          currentImg === "geology"
-            ? formatImgUrl(currentPlanet.images.planet)
-            : formatImgUrl(currentPlanet.images[currentImg])
-        }
-        alt={`image of ${currentPlanet.name} ${currentImg}`}
+        src={imgSrc}
+        alt={`image of ${currentPlanet.name} ${
+          isGeologyView ? "planet" : "currentTab"
+        }`}
       />
-      {currentImg === "geology" && (
+      {isGeologyView && (
         <img
           className={`${currentPlanet.name.toLowerCase()} geology`}
-          src={formatImgUrl(currentPlanet.images.geology)}
+          src={geologyImageSrc}
           alt={`image of ${currentPlanet.name} geology`}
         />
       )}
