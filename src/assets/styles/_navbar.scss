@@ -1,0 +1,136 @@
+@use "./mixin";
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+/* Mobile menu */
+.hamburgerIcon {
+  @include mixin.tablet {
+    display: none;
+  }
+}
+.hamburgerIcon.showMenu {
+  opacity: 0.2;
+}
+.menu-mobile {
+  min-height: 100%;
+  position: absolute;
+  inset: 0;
+  top: 6.8rem;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(0, auto));
+  align-items: baseline;
+  background-color: hsl(var(--color-neutral-900));
+  padding-inline: 2.4rem;
+  padding-block-start: 2.4rem;
+  transition: transform 0.3s linear;
+  overflow: hidden;
+  @include mixin.tablet {
+    display: none;
+  }
+}
+/* ENTERING */
+.menu-mobile-enter {
+  /* Initial state when component is about to enter */
+  transform: translateY(-100%);
+}
+.menu-mobile-enter-active {
+  /* Final state of the enter animation */
+  transform: translateY(0);
+}
+
+/* EXITING */
+.menu-mobile-exit {
+  /* Initial state of the exit animation */
+  transform: translateY(0);
+}
+.menu-mobile-exit-active {
+  /* Final state of the exit animation */
+  transform: translateY(-100%);
+}
+.menu-mobile li {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 2.4rem;
+  border-bottom: 0.1rem solid hsla(var(--color-neutral-000), 0.1);
+  padding-block: 2rem;
+  img {
+    margin-inline-start: auto;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.menu-mobile li a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.136rem;
+}
+.dot {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: hsl(var(--color-mercury));
+  &.venus {
+    background-color: hsl(var(--color-venus));
+  }
+  &.earth {
+    background-color: hsl(var(--color-earth));
+  }
+  &.mars {
+    background-color: hsl(var(--color-mars));
+  }
+
+  &.jupiter {
+    background-color: hsl(var(--color-jupiter));
+  }
+  &.saturn {
+    background-color: hsl(var(--color-saturn));
+  }
+  &.uranus {
+    background-color: hsl(var(--color-uranus));
+  }
+  &.neptune {
+    background-color: hsl(var(--color-neptune));
+  }
+}
+
+/* Tablet menu */
+.menu {
+  display: none;
+  @include mixin.tablet {
+    display: flex;
+    gap: 3.2rem;
+    font-size: 1.1rem;
+    line-height: 2.2;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    height: 5.2rem;
+    li {
+      color: hsla(var(--color-neutral-000), 0.75);
+      border-bottom: 0.4rem solid transparent;
+    }
+    li:has(a.active) {
+      color: hsl(var(--color-neutral-000));
+      border-bottom: 0.4rem solid hsl(var(--color-accent));
+    }
+  }
+  @include mixin.desktop {
+    height: 8.5rem;
+    align-self: flex-start;
+    li {
+      display: flex;
+      align-items: center;
+      border-bottom: none;
+      border-top: 0.4rem solid transparent;
+    }
+    li:has(a.active) {
+      border-bottom: none;
+      border-top: 0.4rem solid hsl(var(--color-accent));
+    }
+  }
+}

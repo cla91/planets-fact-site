@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@300;400;500;700&display=swap");
+:root {
+  --font-heading: "Antonio", sans-serif;
+  --font-body: "League Spartan", sans-serif;
+  --color-neutral-000: 0, 0%, 100%;
+  --color-neutral-900: 240, 67%, 8%;
+  --color-neutral-800: 240, 17%, 26%;
+  --color-neutral-500: 240, 6%, 54%;
+  --color-mercury: 194, 48%, 49%;
+  --color-venus: 33, 82%, 61%;
+  --color-earth: 263, 67%, 51%;
+  --color-mars: 10, 63%, 51%;
+  --color-jupiter: 2, 68%, 53%;
+  --color-saturn: 17, 73%, 46%;
+  --color-uranus: 169, 73%, 44%;
+  --color-neptune: 222, 87%, 56%;
+  --color-accent: var(--color-mercury);
+}
+body.venus {
+  --color-accent: var(--color-venus);
+}
+body.earth {
+  --color-accent: var(--color-earth);
+}
+body.mars {
+  --color-accent: var(--color-mars);
+}
+body.jupiter {
+  --color-accent: var(--color-jupiter);
+}
+body.saturn {
+  --color-accent: var(--color-saturn);
+}
+body.uranus {
+  --color-accent: var(--color-uranus);
+}
+body.neptune {
+  --color-accent: var(--color-neptune);
+}

@@ -1,0 +1,40 @@
+@use "./mixin";
+#root {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  min-height: 100vh;
+  color: hsl(var(--color-neutral-000));
+  background: hsl(var(--color-neutral-900))
+    url("./../images/background-stars.svg");
+  background-size: cover;
+  font-size: 1.3rem;
+  line-height: 2;
+  letter-spacing: 0.064rem;
+  overflow-x: hidden;
+  @include mixin.desktop {
+    font-size: 1.5rem;
+  }
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-transform: uppercase;
+}
+img {
+  max-width: 100%;
+}
+.no-scroll {
+  overflow-y: hidden;
+}
+.error-message {
+  font-size: 3.2rem;
+  text-align: center;
+  padding-block-start: 4rem;
+  align-self: center;
+}
