@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import PlanetContext from "../context/planetContext";
+import PlanetContext from "./../context/planetContext";
 import NavbarLink from "./NavbarLink";
 import hamburgerIcon from "./../assets/images/icon-hamburger.svg";
 import { CSSTransition } from "react-transition-group";

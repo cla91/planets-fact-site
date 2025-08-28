@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import PlanetContext from "../context/planetContext";
+import PlanetContext from "./../context/planetContext";
 import PlanetImage from "../components/PlanetImage";
-import PlanetDetails from "../components/PlanetDetails";
-import PlanetTitle from "../components/PlanetTitle";
-import PlanetSummary from "../components/PlanetSummary";
-import ContentTabs from "../components/ContentTabs";
+import PlanetDetails from "./../components/PlanetDetails";
+import PlanetTitle from "./../components/PlanetTitle";
+import PlanetSummary from "./../components/PlanetSummary";
+import ContentTabs from "./../components/ContentTabs";
 
 export default function Planet() {
   const { planetName } = useParams();
